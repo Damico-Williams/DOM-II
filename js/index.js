@@ -11,9 +11,9 @@ btn[1].addEventListener('click', function(event) {
    event.target.style.color = 'pink';    
  });
 
- const highLight = document.getElementsByTagName('h2')
-  highLight[0].addEventListener('select', function(event) {
-   alert('You highlighted a header!')    
+ const highLight = document.querySelector('.destination h4')
+ hightLight[1].addEventListener('cut', function(event) {
+   event.target.style.color = 'yellow';    
  });
  
 
@@ -51,7 +51,13 @@ const invis = document.querySelector('.intro img')
    event.target.style.display = 'none';    
  });
 
-//  btn[0].addEventListener('focus', function(event) {
+ const foot = document.querySelector('.footer')
+     foot.addEventListener('mouseleave', function(event) {
+       event.target.style.backgroundColor = 'yellow';
+     })
+
+
+     //  btn[0].addEventListener('focus', function(event) {
 //    event.target.style.background = 'pink';    
 //  },true);
  
