@@ -11,10 +11,14 @@ btn[1].addEventListener('click', function(event) {
    event.target.style.color = 'pink';    
  });
 
- const highLight = document.querySelector('.destination h4')
- hightLight[1].addEventListener('cut', function(event) {
-   event.target.style.color = 'yellow';    
+ const highLight = document.querySelectorAll('.destination h4')
+ highLight[0].addEventListener('wheel', function(event) {
+   alert('hello');    
  });
+
+//  highLight[1].addEventListener('click', function(event) {
+//   alert('hello');    
+// });
  
 
  const lg = document.querySelector('.text-content h2')
@@ -51,18 +55,24 @@ const invis = document.querySelector('.intro img')
    event.target.style.display = 'none';    
  });
 
- const foot = document.querySelector('.footer')
-     foot.addEventListener('mouseleave', function(event) {
-       event.target.style.backgroundColor = 'yellow';
+ const foot = document.querySelector('.footer p')
+     foot.addEventListener('click', function(event) {
+       event.target.style.fontSize = '10rem';
+       event.stopPropagation();
+     })
+
+     const footGrey = document.querySelector('.footer')
+     footGrey.addEventListener('click', function(event) {
+       event.target.style.backgroundColor = 'grey';
+       
      })
 
 
-     //  btn[0].addEventListener('focus', function(event) {
-//    event.target.style.background = 'pink';    
-//  },true);
- 
-//  btn[0].addEventListener('blur', function(event) {
-//    event.target.style.background = 'red';    
-//  },true);
+const anchor = document.querySelector('.nav');
+anchor.addEventListener('click', function (event) {
+  console.log('I was clicked');
+  event.preventDefault();
+}) 
+
 
 
