@@ -1,78 +1,80 @@
-// Your code goes here
-const funColor = document.getElementsByClassName('logo-heading')
-funColor[0].addEventListener('mouseover', function(event){
-   event.target.style.color = 'blue';
+
+
+ window.addEventListener('keyup', function(evt){
+  if(evt.keyCode == 68){
+   evt.target.style.width = '35rem'
+    }
 });
 
 
+window.addEventListener('keydown', function(evt) {
+  if(evt.keyCode == 87){
+    evt.target.style.backgroundColor = 'pink';
+  }
+});
 
-const btn = document.querySelectorAll('.destination .btn');
-btn[1].addEventListener('click', function(event) {
-   event.target.style.color = 'pink';    
+
+const reSize = document.querySelector('.text-content h2');
+ reSize.addEventListener('dblclick', function(evt) {
+     evt.target.style.fontSize = '7rem';    
+  });
+
+
+  const btnColor = document.querySelectorAll('.destination .btn');
+btnColor[2].addEventListener('click', function(evt) {
+   evt.target.style.color = 'maroon';    
  });
 
- const highLight = document.querySelectorAll('.destination h4')
- highLight[0].addEventListener('wheel', function(event) {
+
+ const funColor = document.getElementsByClassName('logo-heading');
+funColor[0].addEventListener('mouseover', function(evt){
+    evt.target.style.color = 'purple';
+});
+
+ const noNav = document.querySelector('.nav');
+ noNav.addEventListener('copy', function(evt){
+   evt.target.style.display = 'none';    
+ });
+
+
+ const alertWheel = document.querySelectorAll('.destination h4');
+ alertWheel[1].addEventListener('wheel', function() {
    alert('hello');    
  });
 
-//  highLight[1].addEventListener('click', function(event) {
-//   alert('hello');    
-// });
- 
 
- const lg = document.querySelector('.text-content h2')
- lg.addEventListener('dblclick', function(event) {
-   event.target.style.fontSize = '4rem';    
+ const noImg = document.querySelector('.intro img');
+   noImg.addEventListener('contextmenu', function(evt) {
+     evt.target.style.display = 'none';    
  });
 
 
- window.addEventListener('keydown', function(event) {
-    if(event.keyCode == 79){
-     event.target.style.backgroundColor = 'orange'
-    }
- });
 
-const pTags = document.getElementsByTagName('p')
- window.addEventListener('resize', function(event) {
-    pTags[0].textContent = 'hahahaha!'
-    
+ const pTags = document.getElementsByTagName('p')
+ window.addEventListener('resize', function() {
+    pTags[0].textContent = '안녕하세요'
+  });
+
+  const imgDrag = document.querySelector('.content-destination img');
+  imgDrag.addEventListener('drag', function(evt) {
+    evt.target.style.width = '10rem';    
 });
 
-const ghost = document.querySelector('.nav')
- ghost.addEventListener('copy', function(event) {
-   event.target.style.display = 'none';    
- });
 
- window.addEventListener('keyup', function(event) {
-   if(event.keyCode == 66){
-    event.target.style.width = '50rem'
-   }
-});
-
-const invis = document.querySelector('.intro img')
- invis.addEventListener('contextmenu', function(event) {
-   event.target.style.display = 'none';    
- });
-
- const foot = document.querySelector('.footer p')
-     foot.addEventListener('click', function(event) {
-       event.target.style.fontSize = '10rem';
-       event.stopPropagation();
+const footSize = document.querySelector('.footer p')
+  footSize.addEventListener('click', function(evt) {
+       evt.target.style.fontSize = '5rem';
+       evt.stopPropagation()
      })
 
-     const footGrey = document.querySelector('.footer')
-     footGrey.addEventListener('click', function(event) {
-       event.target.style.backgroundColor = 'grey';
-       
-     })
+const Grey = document.querySelector('.footer')
+  Grey.addEventListener('click', function(evt) {
+       evt.target.style.backgroundColor = 'grey';
+       });
 
 
 const anchor = document.querySelector('.nav');
-anchor.addEventListener('click', function (event) {
-  console.log('I was clicked');
-  event.preventDefault();
-}) 
-
-
-
+    anchor.addEventListener('click', function (event) {
+         console.log('Action Denied.');
+         event.preventDefault();
+       }); 
