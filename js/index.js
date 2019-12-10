@@ -1,6 +1,6 @@
 
 
- window.addEventListener('keyup', function(evt){
+ window.addEventListener('keyup', function(evt) {
   if(evt.keyCode == 68){
    evt.target.style.width = '35rem'
     }
