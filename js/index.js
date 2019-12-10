@@ -7,7 +7,7 @@
 });
 
 
-window.addEventListener('keydown', function(evt) {
+window.addEventListener('keydown', function(evt){
   if(evt.keyCode == 87){
     evt.target.style.backgroundColor = 'pink';
   }
